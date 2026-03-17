@@ -3,7 +3,7 @@ import { Fredoka } from "next/font/google";
 import "./globals.css";
 
 const fredoka = Fredoka({
-  variable: "--font-fredoka-var",
+  variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -13,10 +13,17 @@ export const metadata: Metadata = {
   title: "Pikuland — Dunia Imajinasi Si Kecil Dimulai di Sini!",
   description:
     "Pikuland adalah taman bermain peran edukatif pertama di Indonesia untuk anak usia 2–14 tahun. Beli tiket sekarang dan rasakan petualangan tanpa batas!",
-  keywords: ["pikuland", "taman bermain anak", "playground", "edukatif", "Jakarta"],
+  keywords: [
+    "pikuland",
+    "taman bermain anak",
+    "playground",
+    "edukatif",
+    "Jakarta",
+  ],
   openGraph: {
     title: "Pikuland — Dunia Imajinasi Si Kecil",
-    description: "Taman bermain peran edukatif pertama di Indonesia untuk anak usia 2–14 tahun.",
+    description:
+      "Taman bermain peran edukatif pertama di Indonesia untuk anak usia 2–14 tahun.",
     type: "website",
     locale: "id_ID",
   },
@@ -29,9 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${fredoka.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${fredoka.variable} antialiased`}>{children}</body>
     </html>
   );
 }

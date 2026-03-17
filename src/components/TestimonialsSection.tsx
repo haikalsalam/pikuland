@@ -50,9 +50,27 @@ export default function TestimonialsSection() {
 
       {/* Decorative Vectors Testimonial */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
-        <Image src="/assets/vector-2.png" alt="" width={70} height={70} className="absolute -top-[-30%] right-40 h-auto" />
-        <Image src="/assets/vector-12.png" alt="" width={200} height={200} className="absolute -bottom-10 h-auto" />
-        <Image src="/assets/vector-14.png" alt="" width={180} height={100} className="absolute -bottom-[-32%] -left-[-20%] h-auto" />
+        <Image
+          src="/assets/vector-2.png"
+          alt=""
+          width={70}
+          height={70}
+          className="absolute -top-[-30%] right-40 h-auto"
+        />
+        <Image
+          src="/assets/vector-12.png"
+          alt=""
+          width={200}
+          height={200}
+          className="absolute -bottom-10 h-auto"
+        />
+        <Image
+          src="/assets/vector-14.png"
+          alt=""
+          width={180}
+          height={100}
+          className="absolute -bottom-[-32%] -left-[-20%] h-auto"
+        />
       </div>
 
       <div className="relative max-w-5xl mx-auto z-10">
@@ -72,8 +90,18 @@ export default function TestimonialsSection() {
               <div
                 className={`absolute -top-6 left-6 w-12 h-12 ${t.avatarColor} rounded-full flex items-center justify-center text-white shadow-md`}
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
                 </svg>
               </div>
 
@@ -84,7 +112,7 @@ export default function TestimonialsSection() {
 
               {/* Quote */}
               <p className="mt-4 text-gray-500 text-sm md:text-base italic leading-relaxed font-medium">
-                "{t.quote}"
+                {t.quote}
               </p>
 
               {/* Author */}

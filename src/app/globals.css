@@ -16,12 +16,13 @@
   --radius-pill: 9999px;
 
   /* Font */
-  --font-fredoka: var(--font-fredoka-var);
-  --font-sans: var(--font-fredoka), sans-serif;
+  --font-fredoka: var(--font-sans);
+  --font-sans: var(--font-sans), sans-serif;
 }
 
 /* ===== Global Styles ===== */
 body {
+  font-family: var(--font-sans);
   background-color: var(--color-cream);
   color: #1a1a2e;
   overflow-x: hidden;
