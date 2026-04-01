@@ -35,8 +35,8 @@ export default function ServicesSection() {
 
       {/* Decorative vectors crossing into Gallery */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
-        <Image src="/assets/vector-13.png" alt="" width={90} height={90} className="absolute -bottom-14 right-20 h-auto object-contain z-10" />
-        <Image src="/assets/vector-5.png" alt="" width={450} height={350} className="absolute -bottom-[-5%] right-[5%] h-auto object-contain z-20" />
+        <Image src="/assets/vector-13.png" alt="" width={90} height={90} className="absolute sm:-bottom-14 sm:right-[5%] -bottom-14 right-[5%] h-auto" />
+        <Image src="/assets/vector-5.png" alt="" width={450} height={350} className="absolute bottom-[1%] left-[50%] sm:-bottom-[-5%] sm:right-[5%] h-auto" />
       </div>
 
       <div className="relative max-w-6xl mx-auto z-10">
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           <span className="text-[#E5007E] font-extrabold text-sm tracking-[0.2em] uppercase">
             Wahana Seru
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-[#263238]">
+          <h2 className="mt-2 text-5xl font-black text-[#263238]">
             Petualangan Tanpa Batas
           </h2>
         </div>

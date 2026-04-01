@@ -88,7 +88,7 @@ export default function KarirPage() {
             alt=""
             width={180}
             height={180}
-            className="absolute top-[5%] right-[3.5%]"
+            className="absolute top-[5%] right-[3.5%] w-20 sm:w-auto"
           />
           <Image
             src="/assets/vector-1.png"
@@ -119,8 +119,8 @@ export default function KarirPage() {
             <div className="bg-[#E0F7FF] text-[#00AEEF] px-6 py-2 rounded-full text-xs font-black tracking-widest mb-6 shadow-sm">
               JOIN OUR TEAM
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1A2E44] mb-6">
-              Bekerja Sambil <span className="text-[#E5007E]">Bermain!</span>
+            <h1 className="text-6xl font-black text-[#1A2E44] mb-6">
+              Bekerja Sambil Bermain!
             </h1>
             <p className="text-slate-500 max-w-2xl leading-relaxed font-medium">
               Pikuland bukan sekadar tempat kerja, tapi rumah kedua di mana kita

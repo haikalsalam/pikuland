@@ -50,7 +50,7 @@ export default function HeroSection() {
           >
             Beli Tiket Sekarang
             <Image
-              src="/assets/icon-3.png"
+              src="/assets/icon.png"
               alt="Sparkle Icon"
               width={20}
               height={20}
@@ -80,13 +80,13 @@ export default function HeroSection() {
         <div className="absolute inset-0 pointer-events-none z-0">
           {/* Decorative Vectors Hero */}
           {/* vector-1: kiri tengah — mobile: disembunyikan karena terlalu jauh */}
-          <Image src="/assets/vector-1.png" alt="" width={80} height={40} className="absolute hidden sm:block top-[40%] -left-65" />
+          <Image src="/assets/vector-1.png" alt="" width={50} height={40} className="absolute -bottom-[15%] -right-[4%] sm:block sm:top-[40%] sm:-left-65" />
           {/* vector-15: kiri bawah — mobile: kecil di pojok kiri bawah */}
-          <Image src="/assets/vector-15.png" alt="" width={100} height={100} className="absolute -bottom-2 -left-2 w-12 h-12 sm:w-[100px] sm:h-[100px] sm:-left-8" />
+          <Image src="/assets/vector-15.png" alt="" width={300} height={300} className="absolute -bottom-[-5%] -left-1 w-12 h-12 sm:w-[100px] sm:h-[100px] sm:-left-8" />
           {/* vector-11: kanan bawah — mobile: kecil di pojok kanan bawah */}
           <Image src="/assets/vector-11.png" alt="" width={80} height={80} className="absolute top-[60%] -right-4 w-10 h-10 sm:w-[80px] sm:h-[80px] sm:-right-15" />
           {/* vector-10: kanan tengah — mobile: disembunyikan karena terlalu jauh */}
-          <Image src="/assets/vector-10.png" alt="" width={90} height={40} className="absolute hidden sm:block top-[40%] -right-12" />
+          <Image src="/assets/vector-10.png" alt="" width={90} height={40} className="absolute hidden sm:block sm:top-[40%] sm:-right-12" />
         </div>
 
         <div className="relative border-[12px] md:border-[16px] border-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-xl bg-white aspect-video z-10">

@@ -62,14 +62,14 @@ export default function GaleriPage() {
             alt=""
             width={180}
             height={180}
-            className="absolute top-[20%] right-[3.5%] md:top-[80%] md:right-[3.5%]"
+            className="absolute top-[5%] right-[3.5%] w-20 sm:top-[20%] sm:right-[3.5%] sm:w-auto"
           />
           <Image
             src="/assets/vector-1.png"
             alt=""
             width={100}
             height={50}
-            className="absolute top-[75%] left-[4%] md:top-[100%] md:left-[100%]"
+            className="absolute top-[14%] left-[-1%] w-20 sm:top-[75%] sm:left-[4%] sm:w-auto"
           />
           <Image
             src="/assets/vector-11.png"
@@ -90,7 +90,7 @@ export default function GaleriPage() {
         <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* HEADER */}
           <header className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1A2E44] mb-4">
+            <h1 className="text-6xl font-black text-[#1A2E44] mb-4">
               Galeri Keseruan
             </h1>
             <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-medium">

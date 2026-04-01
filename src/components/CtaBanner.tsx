@@ -9,12 +9,12 @@ export default function CtaBanner() {
         <div className="relative bg-[#E5007E] rounded-[2rem] md:rounded-[3rem] px-6 py-12 md:px-16 md:py-20 text-center overflow-hidden shadow-2xl">
           
           {/* Decorative Vectors CTA Banner */}
-          <Image src="/assets/vector-9.png" alt="" width={100} height={100} className="absolute -top-[0] -right-[-6%] h-auto" />
-          <Image src="/assets/vector-8.png" alt="" width={250} height={250} className="absolute -bottom-[0] -right-2 h-auto" />
-          <Image src="/assets/vector-6.png" alt="" width={280} height={280} className="absolute bottom-[-5%] -left-8 h-auto" />
+          <Image src="/assets/vector-9.png" alt="" width={100} height={100} className="absolute -top-[0] -right-[-6%] w-20 sm:-top-[0] sm:-right-[-6%] sm:h-auto sm:w-auto" />
+          <Image src="/assets/vector-8.png" alt="" width={250} height={250} className="absolute -bottom-[0] -right-2 w-30 sm:-bottom-[0] sm:-right-2 sm:h-auto sm:w-auto" />
+          <Image src="/assets/vector-6.png" alt="" width={280} height={280} className="absolute -top-[-5%] -left-13 w-40 sm:bottom-[-5%] sm:-left-8 sm:h-auto sm:w-auto" />
 
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black text-white leading-tight">
+            <h2 className="text-[3.25rem] font-black text-white leading-tight">
               Siap Petualangan Hari Ini?
             </h2>
             <p className="mt-4 md:mt-6 text-white text-sm md:text-lg max-w-2xl mx-auto font-medium">

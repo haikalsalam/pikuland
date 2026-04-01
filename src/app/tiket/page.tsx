@@ -105,22 +105,22 @@ export default function TiketPage() {
             src="/assets/vector-1.png"
             alt=""
             width={100}
-            height={100}
-            className="absolute top-[15%] right-[13%] rotate-180 scale-x-[-1]"
+            height={50}
+            className="absolute top-[7%] right-[8%] w-10 rotate-180 scale-x-[-1] sm:top-[15%] sm:right-[13%] sm:w-auto"
           />
           <Image
             src="/assets/vector-10.png"
             alt=""
             width={150}
             height={150}
-            className="absolute top-[19%] right-[8%]"
+            className="absolute top-[10%] right-[5%] w-15 sm:top-[19%] sm:right-[8%] sm:w-auto"
           />
           <Image
             src="/assets/vector-1.png"
             alt=""
             width={100}
             height={50}
-            className="absolute top-[45%] left-[2%]"
+            className="absolute top-[15%] left-[-2%] w-10 sm:top-[45%] sm:left-[2%] sm:w-auto"
           />
           <Image
             src="/assets/vector-17.png"

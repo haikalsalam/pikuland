@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     "edukatif",
     "Jakarta",
   ],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Pikuland — Dunia Imajinasi Si Kecil",
     description:

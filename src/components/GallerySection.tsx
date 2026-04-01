@@ -16,6 +16,7 @@ export default function GallerySection() {
         <Image src="/assets/vector-7.png" alt="" width={50} height={100} className="absolute -top-[-50%] right-[10%] h-auto" />
         <Image src="/assets/vector-3.png" alt="" width={80} height={80} className="absolute -bottom-[-10%] right-[7%] h-auto" />
         <Image src="/assets/vector-4.png" alt="" width={150} height={100} className="absolute -top-[-22%] left-[8%] h-auto" />
+        <Image src="/assets/vector-10.png" alt="" width={90} height={40} className="absolute -top-[155%] -left-[7%] sm:hidden" />
       </div>
 
       <div className="relative max-w-6xl mx-auto z-10">

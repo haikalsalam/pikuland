@@ -55,21 +55,21 @@ export default function TestimonialsSection() {
           alt=""
           width={70}
           height={70}
-          className="absolute -top-[-30%] right-40 h-auto"
+          className="absolute -bottom-1 right-10 w-10 sm:top-[-30%] sm:right-40 sm:h-auto"
         />
         <Image
           src="/assets/vector-12.png"
           alt=""
           width={200}
           height={200}
-          className="absolute -bottom-10 h-auto"
+          className="absolute -bottom-10 w-35 sm:w-auto"
         />
         <Image
           src="/assets/vector-14.png"
           alt=""
-          width={180}
+          width={80}
           height={100}
-          className="absolute -bottom-[-32%] -left-[-20%] h-auto"
+          className="absolute top-[11%] right-[16%] sm:-bottom-[-32%] sm:-left-[-20%] sm:w-auto"
         />
       </div>
 

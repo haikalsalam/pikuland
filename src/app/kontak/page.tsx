@@ -40,18 +40,32 @@ export default function KontakPage() {
 
         <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
           <Image
+            src="/assets/vector-1.png"
+            alt=""
+            width={100}
+            height={50}
+            className="absolute top-[7%] right-[8%] w-10 rotate-180 scale-x-[-1] sm:hidden"
+          />
+          <Image
+            src="/assets/vector-10.png"
+            alt=""
+            width={150}
+            height={150}
+            className="absolute top-[10%] right-[5%] w-15 sm:hidden"
+          />
+          <Image
             src="/assets/vector-15.png"
             alt=""
             width={180}
             height={180}
-            className="absolute top-[18%] right-[9%]"
+            className="absolute top-[58%] right-[1%] w-40 sm:top-[18%] sm:right-[9%] sm:w-auto"
           />
           <Image
             src="/assets/vector-1.png"
             alt=""
             width={100}
             height={50}
-            className="absolute top-[75%] left-[4%]"
+            className="absolute top-[15%] left-[-2%] w-10 sm:top-[75%] sm:left-[4%] sm:w-auto"
           />
         </div>
 
