@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-6 bg-cream text-center px-6">
+    <main className="bg-cream flex min-h-screen flex-col items-center justify-center gap-6 px-6 text-center">
       {/* Decorative element */}
       <Image
         src="/assets/vector-12.png"
@@ -12,17 +12,17 @@ export default function NotFound() {
         height={120}
         className="animate-float"
       />
-      <h1 className="text-6xl md:text-8xl font-black text-pink">404</h1>
-      <p className="text-xl md:text-2xl font-bold text-blue-dark">
+      <h1 className="text-pink text-6xl font-black md:text-8xl">404</h1>
+      <p className="text-blue-dark text-xl font-bold md:text-2xl">
         Oops! Halaman tidak ditemukan
       </p>
-      <p className="text-gray-500 max-w-md">
+      <p className="max-w-md text-gray-500">
         Petualangan ini belum tersedia. Yuk kembali ke halaman utama dan
         jelajahi Pikuland!
       </p>
       <Link
         href="/"
-        className="mt-4 inline-block bg-pink text-white font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform shadow-lg"
+        className="bg-pink mt-4 inline-block rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
       >
         Kembali ke Beranda
       </Link>

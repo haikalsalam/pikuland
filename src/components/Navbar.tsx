@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className="fixed top-0 z-50 w-full">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Desktop & Mobile Header Bar */}
-        <div className="mt-3 flex items-center justify-between px-6 py-3 bg-white/50 backdrop-blur-md rounded-full border border-white/20 shadow-sm">
+        <div className="mt-3 flex items-center justify-between rounded-full border border-white/20 bg-white/50 px-6 py-3 shadow-sm backdrop-blur-md">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -45,12 +45,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 text-sm font-bold rounded-full transition-all hover:text-[#E5007E] ${
+                className={`rounded-full px-4 py-2 text-sm font-bold transition-all hover:text-[#E5007E] ${
                   pathname === link.href ? "text-[#E5007E]" : "text-[#1A2E44]"
                 }`}
               >
@@ -62,7 +62,7 @@ export default function Navbar() {
           {/* Desktop CTA Button */}
           <Link
             href="/tiket"
-            className="hidden md:inline-flex items-center gap-2 bg-[#00AEEF] text-white font-bold text-sm px-6 py-2.5 rounded-full hover:bg-[#009CE0] transition-all hover:-translate-y-0.5 shadow-[3px_4px_0px_#007DB3] active:translate-y-1 active:shadow-none"
+            className="hidden items-center gap-2 rounded-full bg-[#00AEEF] px-6 py-2.5 text-sm font-bold text-white shadow-[3px_4px_0px_#007DB3] transition-all hover:translate-y-1 hover:shadow-none active:translate-y-1 active:shadow-none md:inline-flex"
           >
             Beli Tiket
           </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Mobile menu button (Hamburger) */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden p-2 text-[#1A2E44]"
+            className="p-2 text-[#1A2E44] md:hidden"
             aria-label="Open menu"
           >
             <Menu size={28} />
@@ -79,13 +79,13 @@ export default function Navbar() {
 
         {/* FULL SCREEN MOBILE MENU */}
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-[60] bg-[#B9E9FF] md:hidden overflow-hidden animate-in fade-in duration-300">
+          <div className="animate-in fade-in fixed inset-0 z-[60] overflow-hidden bg-[#B9E9FF] duration-300 md:hidden">
             {/* Animasi Background Glow - Muncul perlahan */}
-            <div className="absolute bottom-[-10%] right-[-10%] w-[300px] h-[300px] bg-[#C1A7E2] rounded-full blur-[80px] opacity-60 animate-in zoom-in duration-1000" />
+            <div className="animate-in zoom-in absolute right-[-10%] bottom-[-10%] h-[300px] w-[300px] rounded-full bg-[#C1A7E2] opacity-60 blur-[80px] duration-1000" />
 
-            <div className="relative h-full flex flex-col px-4">
+            <div className="relative flex h-full flex-col px-4">
               {/* 1. Header Pill - Slide down dari atas */}
-              <div className="mt-3 flex items-center justify-between px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-sm animate-in slide-in-from-top-10 duration-500">
+              <div className="animate-in slide-in-from-top-10 mt-3 flex items-center justify-between rounded-full bg-white/80 px-6 py-3 shadow-sm backdrop-blur-sm duration-500">
                 <Image
                   src="/assets/logo-pikuland.png"
                   alt="Pikuland Logo"
@@ -95,21 +95,21 @@ export default function Navbar() {
                 />
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 bg-slate-100/50 rounded-full text-slate-600 hover:rotate-90 transition-transform duration-300"
+                  className="rounded-full bg-slate-100/50 p-2 text-slate-600 transition-transform duration-300 hover:rotate-90"
                 >
                   <X size={24} />
                 </button>
               </div>
 
               {/* 2. Menu Links - Animasi Staggered (Muncul bergantian) */}
-              <div className="flex-grow flex flex-col items-center justify-center gap-8 -mt-20">
+              <div className="-mt-20 flex flex-grow flex-col items-center justify-center gap-8">
                 {navLinks.map((link, index) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     style={{ animationDelay: `${index * 100}ms` }} // Jeda antar menu
-                    className={`text-4xl font-black transition-all hover:scale-110 active:scale-95 animate-in fade-in slide-in-from-bottom-10 fill-mode-forwards ${
+                    className={`animate-in fade-in slide-in-from-bottom-10 fill-mode-forwards text-4xl font-black transition-all hover:scale-110 active:scale-95 ${
                       pathname === link.href
                         ? "text-[#E5007E]"
                         : "text-[#1A2E44]"
@@ -124,7 +124,7 @@ export default function Navbar() {
                   href="/tiket"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ animationDelay: `${navLinks.length * 100}ms` }}
-                  className="mt-4 bg-[#00AEEF] text-white font-black text-xl px-12 py-4 rounded-full shadow-[4px_6px_0px_#007DB3] hover:translate-y-1 hover:shadow-none transition-all animate-in fade-in zoom-in duration-500 fill-mode-forwards"
+                  className="animate-in fade-in zoom-in fill-mode-forwards mt-4 rounded-full bg-[#00AEEF] px-12 py-4 text-xl font-black text-white shadow-[4px_6px_0px_#007DB3] transition-all duration-500 hover:translate-y-1 hover:shadow-none"
                 >
                   Beli Tiket
                 </Link>

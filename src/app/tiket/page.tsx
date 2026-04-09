@@ -88,9 +88,9 @@ export default function TiketPage() {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen bg-[#FFFBE6] pt-28 pb-16 overflow-hidden">
+      <main className="relative min-h-screen overflow-hidden bg-[#FFFBE6] pt-28 pb-16">
         {/* Background (diabaikan sesuai permintaan, tapi dipertahankan strukturnya) */}
-        <div className="absolute inset-0 pointer-events-none opacity-30 z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 opacity-30">
           <Image
             src="/assets/lines-1.png"
             alt=""
@@ -100,13 +100,13 @@ export default function TiketPage() {
         </div>
 
         {/* VEKTOR DEKORASI DARI ASET ANDA */}
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-visible">
           <Image
             src="/assets/vector-1.png"
             alt=""
             width={100}
             height={50}
-            className="absolute top-[7%] right-[8%] w-10 rotate-180 scale-x-[-1] sm:top-[15%] sm:right-[13%] sm:w-auto"
+            className="absolute top-[7%] right-[8%] w-10 scale-x-[-1] rotate-180 sm:top-[15%] sm:right-[13%] sm:w-auto"
           />
           <Image
             src="/assets/vector-10.png"
@@ -127,17 +127,17 @@ export default function TiketPage() {
             alt=""
             width={250}
             height={1125}
-            className="absolute bottom-[-3%] right-[5%]"
+            className="absolute right-[5%] bottom-[-3%]"
           />
         </div>
 
-        <section className="relative z-10 max-w-7xl mx-auto px-4">
+        <section className="relative z-10 mx-auto max-w-7xl px-4">
           {/* Header Section */}
-          <div className="text-center mb-10">
-            <h1 className="text-3xl md:text-5xl font-black text-[#1A2E44] mb-4">
+          <div className="mb-10 text-center">
+            <h1 className="mb-4 text-3xl font-black text-[#1A2E44] md:text-5xl">
               {step === 1 ? "Pilih Tiket Petualanganmu!" : "Kapan Mau Main?"}
             </h1>
-            <p className="text-slate-500 max-w-xl mx-auto font-medium">
+            <p className="mx-auto max-w-xl font-medium text-slate-500">
               {step === 1
                 ? "Main sepuasnya, belajar sebanyaknya. Pilih paket yang paling pas untuk keluarga."
                 : "Pilih tanggal kunjungan dan jumlah petualang kecil yang akan bermain."}
@@ -145,16 +145,16 @@ export default function TiketPage() {
           </div>
 
           {/* Stepper Indicator */}
-          <div className="flex justify-center mb-16">
-            <div className="bg-white/80 backdrop-blur rounded-full px-8 py-3 shadow-sm border border-yellow-100 flex items-center gap-4">
+          <div className="mb-16 flex justify-center">
+            <div className="flex items-center gap-4 rounded-full border border-yellow-100 bg-white/80 px-8 py-3 shadow-sm backdrop-blur">
               <div className="flex items-center gap-2">
                 <span
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${step >= 1 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${step >= 1 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
                 >
                   {step > 1 ? <Check size={14} /> : "1"}
                 </span>
                 <span
-                  className={`hidden sm:inline text-sm font-bold ${step >= 1 ? "text-[#E5007E]" : "text-slate-400"}`}
+                  className={`hidden text-sm font-bold sm:inline ${step >= 1 ? "text-[#E5007E]" : "text-slate-400"}`}
                 >
                   Pilih Tiket
                 </span>
@@ -164,12 +164,12 @@ export default function TiketPage() {
               ></div>
               <div className="flex items-center gap-2">
                 <span
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${step >= 2 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${step >= 2 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
                 >
                   {step > 2 ? <Check size={14} /> : "2"}
                 </span>
                 <span
-                  className={`hidden sm:inline text-sm font-bold ${step >= 2 ? "text-[#E5007E]" : "text-slate-400"}`}
+                  className={`hidden text-sm font-bold sm:inline ${step >= 2 ? "text-[#E5007E]" : "text-slate-400"}`}
                 >
                   Tanggal
                 </span>
@@ -179,12 +179,12 @@ export default function TiketPage() {
               ></div>
               <div className="flex items-center gap-2">
                 <span
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${step === 3 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
+                  className={`flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${step === 3 ? "bg-[#E5007E] text-white" : "bg-slate-200 text-slate-500"}`}
                 >
                   3
                 </span>
                 <span
-                  className={`hidden sm:inline text-sm font-bold ${step === 3 ? "text-[#E5007E]" : "text-slate-400"}`}
+                  className={`hidden text-sm font-bold sm:inline ${step === 3 ? "text-[#E5007E]" : "text-slate-400"}`}
                 >
                   Bayar
                 </span>
@@ -195,39 +195,39 @@ export default function TiketPage() {
           {/* STEP 1: PILIH TIKET */}
           {step === 1 && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+              <div className="mx-auto mb-20 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
                 {tickets.map((t) => (
                   <div
                     key={t.id}
-                    className={`relative bg-white rounded-[2.5rem] p-8 shadow-xl border border-slate-50 flex flex-col ${t.popular ? "ring-4 ring-[#E5007E]/10" : ""}`}
+                    className={`relative flex flex-col rounded-[2.5rem] border border-slate-50 bg-white p-8 shadow-xl ${t.popular ? "ring-4 ring-[#E5007E]/10" : ""}`}
                   >
                     {t.popular && (
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#E5007E] text-white text-[10px] font-black px-5 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#E5007E] px-5 py-1.5 text-[10px] font-black tracking-widest text-white uppercase shadow-lg">
                         Paling Hemat!
                       </div>
                     )}
                     <div
-                      className={`w-14 h-14 rounded-2xl mb-6 flex items-center justify-center text-2xl shadow-inner ${t.id === "harian" ? "bg-cyan-50" : t.id === "annual" ? "bg-pink-50" : "bg-yellow-50"}`}
+                      className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl text-2xl shadow-inner ${t.id === "harian" ? "bg-cyan-50" : t.id === "annual" ? "bg-pink-50" : "bg-yellow-50"}`}
                     >
                       {t.icon}
                     </div>
-                    <h3 className="text-xl font-black text-[#1A2E44] mb-1">
+                    <h3 className="mb-1 text-xl font-black text-[#1A2E44]">
                       {t.title}
                     </h3>
                     <div className="mb-8">
                       <span className={`text-2xl font-black ${t.color}`}>
                         Rp {t.price}
                       </span>
-                      <span className="text-slate-400 text-sm font-medium">
+                      <span className="text-sm font-medium text-slate-400">
                         {" "}
                         {t.unit}
                       </span>
                     </div>
-                    <ul className="space-y-4 mb-10 flex-grow">
+                    <ul className="mb-10 flex-grow space-y-4">
                       {t.features.map((f, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-3 text-sm text-slate-600 font-medium leading-tight"
+                          className="flex items-start gap-3 text-sm leading-tight font-medium text-slate-600"
                         >
                           <Check
                             size={16}
@@ -239,7 +239,7 @@ export default function TiketPage() {
                     </ul>
                     <button
                       onClick={() => setStep(2)}
-                      className={`w-full py-3.5 rounded-full font-bold transition-all ${t.popular ? "bg-[#E5007E] text-white shadow-lg hover:brightness-110" : "bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
+                      className={`w-full rounded-full py-3.5 font-bold transition-all ${t.popular ? "bg-[#E5007E] text-white shadow-lg hover:brightness-110" : "bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
                     >
                       Pilih Tiket
                     </button>
@@ -248,24 +248,24 @@ export default function TiketPage() {
               </div>
 
               {/* FAQ SECTION */}
-              <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-yellow-100">
-                <h2 className="text-2xl font-black text-[#1A2E44] text-center mb-8">
+              <div className="mx-auto max-w-3xl rounded-[2.5rem] border border-yellow-100 bg-white/60 p-8 shadow-sm backdrop-blur md:p-12">
+                <h2 className="mb-8 text-center text-2xl font-black text-[#1A2E44]">
                   Pertanyaan Sering Diajukan
                 </h2>
                 <div className="space-y-4">
                   {faqs.map((faq, i) => (
                     <details
                       key={i}
-                      className="group border-b border-slate-100 last:border-0 pb-4"
+                      className="group border-b border-slate-100 pb-4 last:border-0"
                     >
-                      <summary className="flex items-center justify-between cursor-pointer font-bold text-[#1A2E44] list-none">
+                      <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-[#1A2E44]">
                         {faq.q}
                         <ChevronRight
                           size={18}
-                          className="group-open:rotate-90 transition-transform text-slate-400"
+                          className="text-slate-400 transition-transform group-open:rotate-90"
                         />
                       </summary>
-                      <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+                      <p className="mt-3 text-sm leading-relaxed text-slate-500">
                         {faq.a}
                       </p>
                     </details>
@@ -277,32 +277,32 @@ export default function TiketPage() {
 
           {/* STEP 2: PILIH TANGGAL */}
           {step === 2 && (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 max-w-5xl mx-auto">
-              <div className="bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl border border-slate-100">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-5xl duration-500">
+              <div className="rounded-[3rem] border border-slate-100 bg-white p-8 shadow-2xl md:p-12">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
                   {/* Left Side: Calendar */}
                   <div>
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="mb-6 flex items-center gap-2">
                       <CalendarIcon className="text-cyan-500" size={20} />
                       <h3 className="text-xl font-black text-[#1A2E44]">
                         Pilih Tanggal
                       </h3>
                     </div>
-                    <div className="border border-slate-100 rounded-3xl p-6">
-                      <div className="flex items-center justify-between mb-6 px-2">
+                    <div className="rounded-3xl border border-slate-100 p-6">
+                      <div className="mb-6 flex items-center justify-between px-2">
                         <span className="font-black text-[#1A2E44]">
                           Oktober 2023
                         </span>
                         <div className="flex gap-2">
-                          <button className="p-1.5 hover:bg-slate-50 rounded-lg text-slate-400">
+                          <button className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-50">
                             <ChevronLeft size={20} />
                           </button>
-                          <button className="p-1.5 hover:bg-slate-50 rounded-lg text-slate-400">
+                          <button className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-50">
                             <ChevronRight size={20} />
                           </button>
                         </div>
                       </div>
-                      <div className="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-4">
+                      <div className="mb-4 grid grid-cols-7 gap-1 text-center text-[10px] font-bold tracking-tighter text-slate-400 uppercase">
                         {["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"].map(
                           (d) => (
                             <div key={d}>{d}</div>
@@ -314,7 +314,7 @@ export default function TiketPage() {
                           (day) => (
                             <button
                               key={day}
-                              className={`aspect-square flex items-center justify-center rounded-full text-sm font-bold transition-colors ${day === 24 ? "bg-[#E5007E] text-white shadow-lg" : "hover:bg-pink-50 text-[#1A2E44]"}`}
+                              className={`flex aspect-square items-center justify-center rounded-full text-sm font-bold transition-colors ${day === 24 ? "bg-[#E5007E] text-white shadow-lg" : "text-[#1A2E44] hover:bg-pink-50"}`}
                             >
                               {day}
                             </button>
@@ -322,9 +322,9 @@ export default function TiketPage() {
                         )}
                       </div>
                     </div>
-                    <div className="mt-4 p-4 bg-yellow-50 rounded-2xl border border-yellow-100 flex gap-3 items-start">
+                    <div className="mt-4 flex items-start gap-3 rounded-2xl border border-yellow-100 bg-yellow-50 p-4">
                       <span className="text-lg">⚠️</span>
-                      <p className="text-[11px] text-yellow-700 font-medium leading-relaxed">
+                      <p className="text-[11px] leading-relaxed font-medium text-yellow-700">
                         Tiket berlaku hanya untuk tanggal yang dipilih.
                         Reschedule maksimal H-1.
                       </p>
@@ -333,13 +333,13 @@ export default function TiketPage() {
 
                   {/* Right Side: Counters */}
                   <div className="flex flex-col">
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="mb-6 flex items-center gap-2">
                       <Users className="text-yellow-500" size={20} />
                       <h3 className="text-xl font-black text-[#1A2E44]">
                         Jumlah Pengunjung
                       </h3>
                     </div>
-                    <div className="space-y-4 flex-grow">
+                    <div className="flex-grow space-y-4">
                       {[
                         {
                           label: "Anak-anak",
@@ -354,33 +354,33 @@ export default function TiketPage() {
                       ].map((item) => (
                         <div
                           key={item.key}
-                          className="flex items-center justify-between p-6 bg-slate-50 rounded-[2rem] border border-slate-100"
+                          className="flex items-center justify-between rounded-[2rem] border border-slate-100 bg-slate-50 p-6"
                         >
                           <div>
                             <p className="font-black text-[#1A2E44]">
                               {item.label}
                             </p>
-                            <p className="text-xs text-slate-400 font-medium">
+                            <p className="text-xs font-medium text-slate-400">
                               {item.sub}
                             </p>
                           </div>
-                          <div className="flex items-center gap-4 bg-white rounded-full px-2 py-2 shadow-sm border border-slate-100">
+                          <div className="flex items-center gap-4 rounded-full border border-slate-100 bg-white px-2 py-2 shadow-sm">
                             <button
                               onClick={() =>
                                 updateCount(item.key as "anak" | "dewasa", -1)
                               }
-                              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:text-pink-500"
+                              className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:text-pink-500"
                             >
                               <Minus size={16} />
                             </button>
-                            <span className="w-6 text-center font-black text-lg">
+                            <span className="w-6 text-center text-lg font-black">
                               {counts[item.key as "anak" | "dewasa"]}
                             </span>
                             <button
                               onClick={() =>
                                 updateCount(item.key as "anak" | "dewasa", 1)
                               }
-                              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:text-pink-500"
+                              className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:text-pink-500"
                             >
                               <Plus size={16} />
                             </button>
@@ -391,11 +391,11 @@ export default function TiketPage() {
                     <div className="mt-8 flex gap-4">
                       <button
                         onClick={() => setStep(1)}
-                        className="flex-1 py-4 rounded-full font-black text-slate-400 border-2 border-slate-100 hover:bg-slate-50 flex items-center justify-center gap-2"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-slate-100 py-4 font-black text-slate-400 hover:bg-slate-50"
                       >
                         <ChevronLeft size={20} /> Kembali
                       </button>
-                      <button className="flex-[2] py-4 rounded-full font-black text-white bg-[#E5007E] shadow-xl shadow-pink-200 hover:brightness-110 transition-all">
+                      <button className="flex-[2] rounded-full bg-[#E5007E] py-4 font-black text-white shadow-xl shadow-pink-200 transition-all hover:brightness-110">
                         Lanjut Pembayaran
                       </button>
                     </div>

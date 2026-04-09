@@ -70,9 +70,9 @@ export default function KarirPage() {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen bg-[#FFFDF0] pt-28 pb-24 overflow-hidden">
+      <main className="relative min-h-screen overflow-hidden bg-[#FFFDF0] pt-28 pb-24">
         {/* Background & Vector (Diabaikan sesuai instruksi) */}
-        <div className="absolute inset-0 pointer-events-none opacity-30 z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 opacity-30">
           <Image
             src="/assets/lines-1.png"
             alt=""
@@ -82,7 +82,7 @@ export default function KarirPage() {
         </div>
 
         {/* VEKTOR DEKORASI DARI ASET ANDA */}
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-visible">
           <Image
             src="/assets/vector-16.png"
             alt=""
@@ -102,7 +102,7 @@ export default function KarirPage() {
             alt=""
             width={100}
             height={50}
-            className="absolute bottom-[35%] right-[13%]"
+            className="absolute right-[13%] bottom-[35%]"
           />
           <Image
             src="/assets/vector-11.png"
@@ -113,16 +113,16 @@ export default function KarirPage() {
           />
         </div>
 
-        <section className="relative z-10 max-w-6xl mx-auto px-4">
+        <section className="relative z-10 mx-auto max-w-6xl px-4">
           {/* HEADER */}
-          <header className="mb-16 text-center flex flex-col items-center">
-            <div className="bg-[#E0F7FF] text-[#00AEEF] px-6 py-2 rounded-full text-xs font-black tracking-widest mb-6 shadow-sm">
+          <header className="mb-16 flex flex-col items-center text-center">
+            <div className="mb-6 rounded-full bg-[#E0F7FF] px-6 py-2 text-xs font-black tracking-widest text-[#00AEEF] shadow-sm">
               JOIN OUR TEAM
             </div>
-            <h1 className="text-6xl font-black text-[#1A2E44] mb-6">
+            <h1 className="mb-6 text-6xl font-black text-[#1A2E44]">
               Bekerja Sambil Bermain!
             </h1>
-            <p className="text-slate-500 max-w-2xl leading-relaxed font-medium">
+            <p className="max-w-2xl leading-relaxed font-medium text-slate-500">
               Pikuland bukan sekadar tempat kerja, tapi rumah kedua di mana kita
               menciptakan senyum anak-anak setiap hari. Lingkungan kerja
               suportif, seru, dan penuh tawa menantimu!
@@ -130,21 +130,21 @@ export default function KarirPage() {
           </header>
 
           {/* BENEFIT CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-5xl mx-auto">
+          <div className="mx-auto mb-24 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
             {benefits.map((benefit, idx) => (
               <div
                 key={idx}
-                className="flex flex-col text-center items-center p-8 bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-50 transition-transform hover:-translate-y-2"
+                className="flex flex-col items-center rounded-[2.5rem] border border-slate-50 bg-white p-8 text-center shadow-xl shadow-slate-200/50 transition-transform hover:-translate-y-2"
               >
                 <div
-                  className={`w-16 h-16 rounded-2xl ${benefit.bg} flex items-center justify-center mb-6 shadow-inner`}
+                  className={`h-16 w-16 rounded-2xl ${benefit.bg} mb-6 flex items-center justify-center shadow-inner`}
                 >
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-black text-[#1A2E44] mb-3">
+                <h3 className="mb-3 text-xl font-black text-[#1A2E44]">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-slate-400 font-medium leading-relaxed">
+                <p className="text-sm leading-relaxed font-medium text-slate-400">
                   {benefit.description}
                 </p>
               </div>
@@ -152,8 +152,8 @@ export default function KarirPage() {
           </div>
 
           {/* POSISI TERSEDIA CONTAINER */}
-          <div className="max-w-4xl mx-auto bg-white rounded-[3rem] p-6 md:p-12 shadow-2xl border border-slate-50">
-            <h2 className="text-3xl font-black text-[#1A2E44] text-center mb-10">
+          <div className="mx-auto max-w-4xl rounded-[3rem] border border-slate-50 bg-white p-6 shadow-2xl md:p-12">
+            <h2 className="mb-10 text-center text-3xl font-black text-[#1A2E44]">
               Posisi Tersedia
             </h2>
 
@@ -162,61 +162,61 @@ export default function KarirPage() {
                 <details
                   key={job.id}
                   open={job.isOpen}
-                  className="group rounded-[2rem] border border-slate-100 bg-white overflow-hidden transition-all open:border-[#E5007E] open:border-2"
+                  className="group overflow-hidden rounded-[2rem] border border-slate-100 bg-white transition-all open:border-2 open:border-[#E5007E]"
                 >
-                  <summary className="flex cursor-pointer items-center justify-between p-6 md:p-8 list-none outline-none">
+                  <summary className="flex cursor-pointer list-none items-center justify-between p-6 outline-none md:p-8">
                     <div className="flex flex-col gap-3">
-                      <h3 className="text-lg md:text-xl font-black text-[#1A2E44] group-open:text-[#E5007E] transition-colors">
+                      <h3 className="text-lg font-black text-[#1A2E44] transition-colors group-open:text-[#E5007E] md:text-xl">
                         {job.title}
                       </h3>
                       <div className="flex flex-wrap gap-2">
-                        <span className="bg-[#26C1ED] text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+                        <span className="rounded-full bg-[#26C1ED] px-4 py-1 text-[10px] font-black tracking-wider text-white uppercase">
                           {job.category}
                         </span>
-                        <span className="bg-slate-100 text-slate-500 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+                        <span className="rounded-full bg-slate-100 px-4 py-1 text-[10px] font-black tracking-wider text-slate-500 uppercase">
                           {job.type}
                         </span>
                       </div>
                     </div>
                     <ChevronDown
-                      className="text-slate-300 group-open:rotate-180 transition-transform"
+                      className="text-slate-300 transition-transform group-open:rotate-180"
                       size={24}
                     />
                   </summary>
 
                   {job.description && (
-                    <div className="px-6 md:px-8 pb-8 pt-2">
-                      <p className="text-sm text-slate-500 leading-relaxed mb-6 font-medium">
+                    <div className="px-6 pt-2 pb-8 md:px-8">
+                      <p className="mb-6 text-sm leading-relaxed font-medium text-slate-500">
                         {job.description}
                       </p>
 
                       <div className="mb-6">
-                        <h4 className="font-black text-[#1A2E44] text-sm mb-3">
+                        <h4 className="mb-3 text-sm font-black text-[#1A2E44]">
                           Kualifikasi:
                         </h4>
                         <ul className="space-y-2">
                           {job.qualifications?.map((q, i) => (
                             <li
                               key={i}
-                              className="text-sm text-slate-500 flex items-center gap-2 font-medium"
+                              className="flex items-center gap-2 text-sm font-medium text-slate-500"
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />{" "}
+                              <span className="h-1.5 w-1.5 rounded-full bg-slate-400" />{" "}
                               {q}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-6 border-t border-slate-50">
+                      <div className="flex flex-col justify-between gap-4 border-t border-slate-50 pt-6 md:flex-row md:items-end">
                         <div>
                           <p className="text-sm font-black text-[#1A2E44]">
                             Kirim CV kamu ke :
                           </p>
-                          <p className="text-[#00AEEF] font-bold text-sm">
+                          <p className="text-sm font-bold text-[#00AEEF]">
                             careers@pikuland.com
                           </p>
                         </div>
-                        <p className="text-[11px] italic text-red-500 font-medium">
+                        <p className="text-[11px] font-medium text-red-500 italic">
                           *Lowongan Berakhir {job.deadline}
                         </p>
                       </div>

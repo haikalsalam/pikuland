@@ -8,25 +8,25 @@ import { useState } from "react";
 const images = [
   {
     id: 1,
-    src: "/assets/petualangan-tak-terbatas.png",
+    src: "/assets/galeri-1.png",
     category: "Fisik",
     pos: "left-tall",
   },
   {
     id: 2,
-    src: "/assets/kolam-bola-raksasa.png",
+    src: "/assets/galeri-2.png",
     category: "Bermain",
     pos: "mid-top",
   },
   {
     id: 3,
-    src: "/assets/gameplay-preview.png",
+    src: "/assets/galeri-3.png",
     category: "Edukasi",
     pos: "mid-bottom",
   },
   {
     id: 4,
-    src: "/assets/panjat-tebing-aman.png",
+    src: "/assets/galeri-4.png",
     category: "Fisik",
     pos: "right-tall",
   },
@@ -44,9 +44,9 @@ export default function GaleriPage() {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen bg-[#FFFBE6] pt-32 pb-24 overflow-hidden">
+      <main className="relative min-h-screen overflow-hidden bg-[#FFFBE6] pt-32 pb-24">
         {/* BACKGROUND UTAMA - TIDAK DIHAPUS */}
-        <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 opacity-40">
           <Image
             src="/assets/lines-1.png"
             alt=""
@@ -56,7 +56,7 @@ export default function GaleriPage() {
         </div>
 
         {/* VEKTOR DEKORASI DARI ASET ANDA */}
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-visible">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-visible">
           <Image
             src="/assets/vector-16.png"
             alt=""
@@ -76,7 +76,7 @@ export default function GaleriPage() {
             alt=""
             width={100}
             height={50}
-            className="absolute bottom-[-1%] right-[20%] rotate-90 transform scale-x-[-1]"
+            className="absolute right-[20%] bottom-[-1%] scale-x-[-1] rotate-90 transform"
           />
           <Image
             src="/assets/vector-11.png"
@@ -87,27 +87,27 @@ export default function GaleriPage() {
           />
         </div>
 
-        <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* HEADER */}
           <header className="mb-12 text-center">
-            <h1 className="text-6xl font-black text-[#1A2E44] mb-4">
+            <h1 className="mb-4 text-6xl font-black text-[#1A2E44]">
               Galeri Keseruan
             </h1>
-            <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto font-medium">
+            <p className="mx-auto max-w-2xl text-base font-medium text-slate-500 md:text-lg">
               Intip momen-momen bahagia teman-teman kecil kita di Pikuland!
             </p>
           </header>
 
           {/* FILTER TABS */}
-          <div className="flex flex-wrap justify-center gap-3 mb-14">
+          <div className="mb-14 flex flex-wrap justify-center gap-3">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-8 py-2.5 rounded-full font-bold text-sm transition-all shadow-sm ${
+                className={`rounded-full px-8 py-2.5 text-sm font-bold shadow-sm transition-all ${
                   activeTab === cat
                     ? "bg-[#E5007E] text-white shadow-lg shadow-pink-200"
-                    : "bg-white text-slate-400 border border-slate-100 hover:bg-slate-50"
+                    : "border border-slate-100 bg-white text-slate-400 hover:bg-slate-50"
                 }`}
               >
                 {cat}
@@ -115,9 +115,9 @@ export default function GaleriPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:h-[700px]">
+          <div className="grid grid-cols-1 gap-5 md:h-[700px] md:grid-cols-3">
             {/* Kolom Kiri: Foto Tinggi */}
-            <div className="relative h-[500px] md:h-full overflow-hidden rounded-[2.5rem] shadow-xl">
+            <div className="relative h-[500px] overflow-hidden rounded-[2.5rem] shadow-xl md:h-full">
               <Image
                 src={images[0].src}
                 alt="Petualangan"
@@ -127,7 +127,7 @@ export default function GaleriPage() {
             </div>
 
             {/* Kolom Tengah: Dua Foto Kecil Vertikal */}
-            <div className="grid grid-rows-2 gap-5 h-[600px] md:h-full">
+            <div className="grid h-[600px] grid-rows-2 gap-5 md:h-full">
               <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
                 <Image
                   src={images[1].src}
@@ -147,7 +147,7 @@ export default function GaleriPage() {
             </div>
 
             {/* Kolom Kanan: Foto Tinggi */}
-            <div className="relative h-[500px] md:h-full overflow-hidden rounded-[2.5rem] shadow-xl">
+            <div className="relative h-[500px] overflow-hidden rounded-[2.5rem] shadow-xl md:h-full">
               <Image
                 src={images[3].src}
                 alt="Panjat Tebing"
